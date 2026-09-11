@@ -19,7 +19,13 @@ export function CTA({ onContact }: Props) {
             Comece a tomar decisões guiadas por inteligência.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href="#solucao">Conheça a TheDobra</Button>
+            <Button
+              href="https://app.thedobra.cc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Testar grátis
+            </Button>
             <Button variant="ghost" onClick={onContact}>
               Falar com um especialista
             </Button>

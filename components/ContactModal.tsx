@@ -90,6 +90,15 @@ function ModalCard({ onClose }: { onClose: () => void }) {
             className="mt-8 space-y-4"
             onSubmit={(event) => {
               event.preventDefault();
+              const source =
+                new URLSearchParams(window.location.search).get("utm_source") ||
+                document.referrer ||
+                "direct";
+              window.dispatchEvent(
+                new CustomEvent("thedobra:lead", {
+                  detail: { source, funnel: "lead" },
+                }),
+              );
               setSent(true);
             }}
           >

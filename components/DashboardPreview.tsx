@@ -29,10 +29,15 @@ export function DashboardPreview() {
         <div ref={ref} className="mt-16 rounded-[28px] border border-white/8 bg-[#0c0c11] p-4 md:p-7">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p className="text-[13px] text-white/40">TheDobra · Visão executiva</p>
+              <p className="text-[13px] text-white/40">
+                TheDobra · Visão executiva
+              </p>
               <p className="text-[17px] tracking-[-0.02em]">Performance consolidada</p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full border border-ai/25 bg-ai/8 px-3 py-1.5 text-[11px] text-ai">
+                Exemplo ilustrativo
+              </span>
               {["30 dias", "Unidade", "Canal"].map((filter, index) => (
                 <span
                   key={filter}

@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/Button";
 import { motion, useReducedMotion } from "framer-motion";
 
 type Props = {
-  onDiscover: () => void;
+  onContact: () => void;
 };
 
-export function Hero({ onDiscover }: Props) {
+export function Hero({ onContact }: Props) {
   const reduce = useReducedMotion();
 
   return (
@@ -37,7 +37,7 @@ export function Hero({ onDiscover }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
         >
-          Transforme dados em decisões.
+          Conecte seus dados e descubra o que fazer em minutos.
         </motion.h1>
         <motion.p
           className="lede mx-auto mt-7 max-w-[42rem] text-[17px] text-white/58 md:text-[21px]"
@@ -45,9 +45,9 @@ export function Hero({ onDiscover }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.36 }}
         >
-          A TheDobra utiliza Business Intelligence e Inteligência Artificial
-          para transformar dados complexos em insights claros, precisos e
-          valiosos para o seu negócio.
+          Para empresas que já usam ERP, CRM ou planilhas e precisam de uma
+          visão clara do comercial, financeiro e operacional — com próximos
+          passos, não apenas gráficos.
         </motion.p>
         <motion.div
           className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row"
@@ -55,11 +55,26 @@ export function Hero({ onDiscover }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <Button onClick={onDiscover}>Descobrir a TheDobra</Button>
-          <Button href="#como-funciona" variant="ghost">
-            Ver como funciona
+          <Button
+            href="https://app.thedobra.cc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Testar grátis
+          </Button>
+          <Button onClick={onContact} variant="ghost">
+            Falar com especialista
           </Button>
         </motion.div>
+        <motion.p
+          className="mx-auto mt-7 max-w-2xl text-[12px] tracking-[0.02em] text-white/38"
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.65 }}
+        >
+          Comece com os dados que você já tem · implantação orientada · sem
+          compromisso
+        </motion.p>
       </div>
 
       <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 text-[11px] tracking-[0.22em] text-white/30 uppercase md:block">

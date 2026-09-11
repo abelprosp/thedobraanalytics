@@ -37,10 +37,15 @@ export function AIAnalyst() {
                 <p className="text-[13px] text-white/45">Analista TheDobra</p>
                 <p className="text-[15px] tracking-[-0.02em]">Briefing executivo</p>
               </div>
-              <span className="flex items-center gap-2 text-[12px] text-ai">
-                <span className="h-1.5 w-1.5 rounded-full bg-ai" />
-                Ao vivo
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] text-white/40">
+                  Exemplo ilustrativo
+                </span>
+                <span className="flex items-center gap-2 text-[12px] text-ai">
+                  <span className="h-1.5 w-1.5 rounded-full bg-ai" />
+                  Ao vivo
+                </span>
+              </div>
             </div>
 
             <div className="grid lg:grid-cols-[1.1fr_0.9fr]">

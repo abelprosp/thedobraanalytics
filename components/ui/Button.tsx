@@ -5,6 +5,8 @@ type Variant = "primary" | "ghost" | "light" | "dark";
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   href?: string;
+  target?: string;
+  rel?: string;
   variant?: Variant;
   children: ReactNode;
 };
@@ -22,6 +24,8 @@ const styles: Record<Variant, string> = {
 
 export function Button({
   href,
+  target,
+  rel,
   variant = "primary",
   className,
   children,
@@ -35,7 +39,7 @@ export function Button({
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} target={target} rel={rel} className={classes}>
         {children}
       </a>
     );

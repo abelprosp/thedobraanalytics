@@ -13,7 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thedobra.com"),
+  metadataBase: new URL("https://www.thedobra.cc"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: "TheDobra — Inteligência de dados para decisões extraordinárias",
     template: "%s · TheDobra",
@@ -36,6 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "TheDobra",
+    url: "https://www.thedobra.cc",
   },
   twitter: {
     card: "summary_large_image",
@@ -68,12 +72,40 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "TheDobra",
-              description:
-                "Inteligência de dados para decisões extraordinárias. Business Intelligence e Inteligência Artificial.",
-              url: "https://thedobra.com",
-              slogan: "Seus dados já sabem a resposta. A TheDobra mostra onde ela está.",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "https://www.thedobra.cc/#organization",
+                name: "TheDobra",
+                description:
+                  "Inteligência de dados para decisões extraordinárias. Business Intelligence e Inteligência Artificial.",
+                url: "https://www.thedobra.cc",
+                slogan:
+                  "Seus dados já sabem a resposta. A TheDobra mostra onde ela está.",
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://www.thedobra.cc/#website",
+                name: "TheDobra",
+                url: "https://www.thedobra.cc",
+                publisher: {
+                  "@id": "https://www.thedobra.cc/#organization",
+                },
+                inLanguage: "pt-BR",
+              },
+              {
+                "@type": "SoftwareApplication",
+                name: "TheDobra",
+                applicationCategory: "BusinessApplication",
+                operatingSystem: "Web",
+                description:
+                  "Plataforma de inteligência de dados com Business Intelligence, dashboards e análise assistida por Inteligência Artificial.",
+                url: "https://www.thedobra.cc",
+                publisher: {
+                  "@id": "https://www.thedobra.cc/#organization",
+                },
+              },
+            ],
             }),
           }}
         />

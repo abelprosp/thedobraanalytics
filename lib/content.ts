@@ -126,3 +126,55 @@ export const useCases = [
     ],
   },
 ] as const;
+
+export const connectorGroups = [
+  {
+    name: "Bases de dados",
+    items: [
+      "PostgreSQL",
+      "Supabase",
+      "MySQL",
+      "MariaDB",
+      "SQL Server",
+      "Oracle",
+      "Amazon Redshift",
+      "Snowflake",
+      "BigQuery",
+      "Databricks",
+      "MongoDB",
+      "ODBC / DSN",
+    ],
+  },
+  {
+    name: "Ficheiros e entrada manual",
+    items: ["Manual", "CSV", "Excel", "Google Sheets", "JSON / NDJSON", "Parquet", "PDF"],
+  },
+  {
+    name: "Web e APIs",
+    items: ["REST JSON", "URL JSON", "OData", "Webhook"],
+  },
+  {
+    name: "Negócios e sistemas brasileiros",
+    items: ["Asaas", "Conta Azul", "Bitrix24", "Omie", "TOTVS Protheus", "SAP Business One", "Senior"],
+  },
+  {
+    name: "Publicidade",
+    items: ["Google Ads", "Meta Ads"],
+  },
+  {
+    name: "Redes sociais, CRM e marketplaces",
+    items: ["Instagram", "Facebook", "Google Meu Negócio", "Salesforce", "Mercado Livre"],
+  },
+  {
+    name: "Dados econômicos e públicos",
+    items: ["IBGE", "Contabilidade / OFX", "Inflação / IPCA", "Expectativa de mercado", "Câmbio em tempo real"],
+  },
+  {
+    name: "Cloud e SaaS",
+    items: ["Google Analytics", "GitHub", "Stripe"],
+  },
+  {
+    name: "Streaming e eventos",
+    items: ["Kafka", "MQTT"],
+  },
+] as const;
