@@ -13,10 +13,11 @@ export function CTA({ onContact }: Props) {
       <div className="mx-auto flex min-h-[80svh] max-w-[980px] flex-col justify-center px-5 py-32 text-center md:px-8">
         <Reveal>
           <h2 className="display text-[clamp(2.6rem,7vw,5.8rem)]">
-            Pare de apenas olhar para seus dados.
+            Seus dados já sabem o que está acontecendo.
+            <span className="mt-3 block text-white/55">A TheDobra mostra o que fazer.</span>
           </h2>
           <p className="lede mx-auto mt-8 max-w-xl text-[18px] text-white/55 md:text-[22px]">
-            Comece a tomar decisões guiadas por inteligência.
+            Descubra oportunidades, riscos e gargalos na sua operação.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
@@ -24,7 +25,7 @@ export function CTA({ onContact }: Props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Testar grátis
+              Descobrir o que meus dados estão dizendo
             </Button>
             <Button variant="ghost" onClick={onContact}>
               Falar com um especialista

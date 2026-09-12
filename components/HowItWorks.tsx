@@ -4,12 +4,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { motion, useReducedMotion } from "framer-motion";
 
 const steps = [
-  { n: "01", title: "Conectamos seus dados" },
-  { n: "02", title: "Estruturamos sua informação" },
-  { n: "03", title: "Construímos seus indicadores" },
-  { n: "04", title: "Aplicamos Inteligência Artificial" },
-  { n: "05", title: "Entregamos insights acionáveis" },
-  { n: "06", title: "Você toma decisões melhores" },
+  { n: "01", title: "Conectamos", text: "ERP, CRM, Excel, APIs e outras fontes." },
+  { n: "02", title: "Estruturamos", text: "Organizamos e padronizamos os dados." },
+  { n: "03", title: "Entregamos", text: "Dashboard, IA, indicadores e insights." },
 ];
 
 export function HowItWorks() {
@@ -21,8 +18,12 @@ export function HowItWorks() {
         <Reveal>
           <p className="eyebrow">Como funciona</p>
           <h2 className="display mt-6 max-w-[14ch] text-[clamp(2.3rem,5.4vw,4.6rem)]">
-            Uma jornada. Do caos à decisão.
+            Você não precisa reorganizar sua empresa.
           </h2>
+          <p className="lede mt-7 max-w-2xl text-[18px] text-white/58 md:text-[21px]">
+            Nós organizamos os dados que sua empresa já possui e entregamos
+            clareza para a próxima decisão.
+          </p>
         </Reveal>
 
         <ol className="mt-16 grid grid-cols-1 border-t border-white/8 md:grid-cols-2 lg:grid-cols-6">
@@ -36,9 +37,12 @@ export function HowItWorks() {
               transition={{ duration: 0.7, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="font-mono text-[12px] text-accent">{step.n}</p>
-              <h3 className="text-[1.35rem] leading-snug tracking-[-0.03em] lg:mt-4 lg:text-[1.15rem]">
-                {step.title}
-              </h3>
+              <div>
+                <h3 className="text-[1.35rem] leading-snug tracking-[-0.03em] lg:mt-4 lg:text-[1.15rem]">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-[13px] leading-relaxed text-white/45">{step.text}</p>
+              </div>
             </motion.li>
           ))}
         </ol>

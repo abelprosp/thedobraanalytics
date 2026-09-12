@@ -6,9 +6,11 @@ import { useCases } from "@/lib/content";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
+const featuredUseCases = useCases.slice(0, 3);
+
 export function UseCases() {
   const [active, setActive] = useState(0);
-  const current = useCases[active];
+  const current = featuredUseCases[active];
 
   return (
     <section id="casos" className="bg-paper text-ink">
@@ -16,13 +18,17 @@ export function UseCases() {
         <Reveal>
           <p className="eyebrow">Casos de uso</p>
           <h2 className="display mt-6 max-w-[12ch] text-[clamp(2.3rem,5.4vw,4.6rem)]">
-            Uma inteligência. Todas as áreas.
+            Comece por onde a decisão pesa mais.
           </h2>
+          <p className="lede mt-7 max-w-2xl text-[18px] text-graphite md:text-[21px]">
+            A TheDobra começa perto da liderança: visão executiva, receita,
+            margem e os pontos onde sua operação está perdendo dinheiro.
+          </p>
         </Reveal>
 
         <div className="mt-16 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible">
-            {useCases.map((item, index) => (
+            {featuredUseCases.map((item, index) => (
               <button
                 key={item.id}
                 type="button"
@@ -73,6 +79,7 @@ export function UseCases() {
 
 function UseCaseChart({ id }: { id: string }) {
   const series: Record<string, number[]> = {
+    diretoria: [70, 72, 76, 81, 86, 90],
     comercial: [24, 32, 30, 44, 52, 61],
     financeiro: [40, 38, 42, 47, 45, 53],
     marketing: [18, 28, 24, 36, 41, 48],

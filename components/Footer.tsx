@@ -1,7 +1,7 @@
 import { Logo } from "@/components/Logo";
 
 const links = [
-  { href: "#solucao", label: "Produto" },
+  { href: "#produto", label: "Produto" },
   { href: "#casos", label: "Soluções" },
   { href: "#ia", label: "Inteligência Artificial" },
   { href: "#dashboards", label: "BI" },

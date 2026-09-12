@@ -30,6 +30,29 @@ export function AIAnalyst() {
           ))}
         </div>
 
+        <Reveal className="mt-5" y={24}>
+          <div className="grid gap-3 md:grid-cols-3">
+            <Signal
+              tone="red"
+              label="Alerta"
+              title="Margem caiu 6,2%"
+              text="Concentrada no produto X e em duas regiões."
+            />
+            <Signal
+              tone="yellow"
+              label="Oportunidade"
+              title="Produto Y cresceu 23%"
+              text="Acima da média histórica nas últimas quatro semanas."
+            />
+            <Signal
+              tone="green"
+              label="Previsão"
+              title="Receita projetada: R$ 4,6M"
+              text="Probabilidade de atingir a meta: 82%."
+            />
+          </div>
+        </Reveal>
+
         <Reveal className="mt-16" y={40}>
           <div className="overflow-hidden rounded-[28px] border border-white/8 bg-[#0b0b10]">
             <div className="flex items-center justify-between border-b border-white/6 px-6 py-4">
@@ -84,6 +107,35 @@ export function AIAnalyst() {
         </Reveal>
       </div>
     </section>
+  );
+}
+
+function Signal({
+  tone,
+  label,
+  title,
+  text,
+}: {
+  tone: "red" | "yellow" | "green";
+  label: string;
+  title: string;
+  text: string;
+}) {
+  const colors = {
+    red: "border-red-400/20 bg-red-400/[0.05] text-red-300",
+    yellow: "border-yellow-300/20 bg-yellow-300/[0.05] text-yellow-200",
+    green: "border-emerald-300/20 bg-emerald-300/[0.05] text-emerald-200",
+  };
+
+  return (
+    <article className={`rounded-3xl border p-5 ${colors[tone]}`}>
+      <p className="text-[11px] tracking-[0.14em] uppercase">{label}</p>
+      <h3 className="mt-4 text-[1.15rem] tracking-[-0.03em] text-white">{title}</h3>
+      <p className="mt-2 text-[13px] leading-relaxed text-white/50">{text}</p>
+      <p className="mt-5 text-[10px] tracking-[0.12em] text-white/30 uppercase">
+        Exemplo ilustrativo
+      </p>
+    </article>
   );
 }
 

@@ -1,5 +1,5 @@
 export const navLinks = [
-  { href: "#solucao", label: "Produto" },
+  { href: "#produto", label: "Produto" },
   { href: "#ia", label: "Inteligência" },
   { href: "#dashboards", label: "BI" },
   { href: "#casos", label: "Soluções" },
@@ -66,9 +66,19 @@ export const askQuestions = [
 
 export const useCases = [
   {
+    id: "diretoria",
+    title: "CEO / Diretoria",
+    text: "Saiba o que está acontecendo na empresa sem abrir 15 planilhas.",
+    kpis: [
+      { label: "Meta", value: "104%" },
+      { label: "Receita", value: "R$ 4,2 mi" },
+      { label: "Forecast", value: "R$ 4,8 mi" },
+    ],
+  },
+  {
     id: "comercial",
     title: "Comercial",
-    text: "Descubra onde estão suas maiores oportunidades de venda.",
+    text: "Descubra onde seu funil está perdendo dinheiro.",
     kpis: [
       { label: "Pipeline", value: "R$ 12,4 mi" },
       { label: "Win rate", value: "31%" },
@@ -78,21 +88,11 @@ export const useCases = [
   {
     id: "financeiro",
     title: "Financeiro",
-    text: "Entenda receitas, custos, margens e previsões.",
+    text: "Entenda o que está movimentando sua margem e seu caixa.",
     kpis: [
       { label: "Receita", value: "R$ 4,2 mi" },
       { label: "Margem", value: "38%" },
       { label: "Runway", value: "19 meses" },
-    ],
-  },
-  {
-    id: "marketing",
-    title: "Marketing",
-    text: "Descubra quais canais realmente geram resultado.",
-    kpis: [
-      { label: "CAC", value: "R$ 186" },
-      { label: "ROAS", value: "4,7×" },
-      { label: "SQL", value: "+22%" },
     ],
   },
   {

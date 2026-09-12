@@ -29,7 +29,7 @@ export function Hero({ onContact }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
-          Inteligência de dados
+          AI Business Intelligence
         </motion.p>
         <motion.h1
           className="display mx-auto mt-6 max-w-[16ch] text-[clamp(3.1rem,9vw,7.4rem)] text-white"
@@ -37,7 +37,7 @@ export function Hero({ onContact }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
         >
-          Conecte seus dados e descubra o que fazer em minutos.
+          Seu negócio já tem os dados. Falta alguém para interpretá-los.
         </motion.h1>
         <motion.p
           className="lede mx-auto mt-7 max-w-[42rem] text-[17px] text-white/58 md:text-[21px]"
@@ -45,9 +45,9 @@ export function Hero({ onContact }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.36 }}
         >
-          Para empresas que já usam ERP, CRM ou planilhas e precisam de uma
-          visão clara do comercial, financeiro e operacional — com próximos
-          passos, não apenas gráficos.
+          A TheDobra conecta ERP, CRM, planilhas e outras fontes, encontra
+          padrões e mostra o que precisa da sua atenção — com decisões
+          acionáveis, não apenas gráficos.
         </motion.p>
         <motion.div
           className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row"
@@ -60,7 +60,7 @@ export function Hero({ onContact }: Props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Testar grátis
+            Analisar meus dados
           </Button>
           <Button onClick={onContact} variant="ghost">
             Falar com especialista
