@@ -10,11 +10,11 @@ export function ConnectorCatalog() {
 
   return (
     <Reveal className="mt-16">
-      <div className="border-t border-white/8 pt-10">
+      <div id="conectores" className="border-t border-white/8 pt-10">
         <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
             <p className="eyebrow text-white/40">Conectores</p>
-            <h3 className="mt-4 text-[clamp(1.8rem,4vw,3rem)] tracking-[-0.04em]">
+            <h3 className="mt-4 max-w-[14ch] text-[clamp(2.2rem,5vw,4rem)] leading-[0.98] tracking-[-0.05em]">
               Comece com o que já está na sua empresa.
             </h3>
           </div>

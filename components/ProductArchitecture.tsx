@@ -2,7 +2,6 @@
 
 import { Reveal } from "@/components/ui/Reveal";
 import { ConnectorCatalog } from "@/components/ConnectorCatalog";
-import { ConnectorOrbit } from "@/components/ConnectorOrbit";
 import { motion } from "framer-motion";
 
 const sources = ["ERP", "CRM", "Excel", "APIs", "Google", "Financeiro"];
@@ -59,7 +58,6 @@ export function ProductArchitecture() {
           </Reveal>
         </div>
 
-        <ConnectorOrbit />
         <ConnectorCatalog />
       </div>
     </section>
