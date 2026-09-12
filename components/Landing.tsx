@@ -12,6 +12,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { Navbar } from "@/components/Navbar";
 import { Problem } from "@/components/Problem";
 import { PowerBIComparison } from "@/components/PowerBIComparison";
+import { Pricing } from "@/components/Pricing";
 import { ProductArchitecture } from "@/components/ProductArchitecture";
 import { Solution } from "@/components/Solution";
 import { UseCases } from "@/components/UseCases";
@@ -24,7 +25,7 @@ export function Landing() {
 
   return (
     <>
-      <Navbar />
+      <Navbar onContact={openContact} />
       <main id="conteudo">
         <Hero onContact={openContact} />
         <Problem />
@@ -37,6 +38,7 @@ export function Landing() {
         <AskData />
         <PowerBIComparison />
         <FAQ />
+        <Pricing onContact={openContact} />
         <CTA onContact={openContact} />
       </main>
       <Footer />

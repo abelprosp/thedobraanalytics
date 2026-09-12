@@ -111,6 +111,52 @@ button {
   background: var(--line);
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.orbit-slow {
+  animation: orbit 110s linear infinite;
+}
+
+.orbit-slower {
+  animation: orbit 150s linear infinite reverse;
+}
+
+.orbit-icon {
+  animation: orbit-reverse 110s linear infinite;
+}
+
+.orbit-icon-slow {
+  animation: orbit 150s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-slow,
+  .orbit-slower,
+  .orbit-icon,
+  .orbit-icon-slow {
+    animation: none;
+  }
+}
+
 .grain {
   pointer-events: none;
   position: fixed;

@@ -6,6 +6,7 @@ const links = [
   { href: "#ia", label: "Inteligência Artificial" },
   { href: "#dashboards", label: "BI" },
   { href: "#diferencial", label: "Empresa" },
+  { href: "#planos", label: "Planos" },
   { href: "#contato", label: "Contato" },
 ];
 

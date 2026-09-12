@@ -19,17 +19,8 @@ export function CTA({ onContact }: Props) {
           <p className="lede mx-auto mt-8 max-w-xl text-[18px] text-white/55 md:text-[22px]">
             Descubra oportunidades, riscos e gargalos na sua operação.
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button
-              href="https://app.thedobra.cc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Descobrir o que meus dados estão dizendo
-            </Button>
-            <Button variant="ghost" onClick={onContact}>
-              Falar com um especialista
-            </Button>
+          <div className="mt-10 flex justify-center">
+            <Button onClick={onContact}>Falar com um especialista</Button>
           </div>
         </Reveal>
       </div>

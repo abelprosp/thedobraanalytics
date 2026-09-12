@@ -7,7 +7,11 @@ import { navLinks } from "@/lib/content";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export function Navbar() {
+type Props = {
+  onContact: () => void;
+};
+
+export function Navbar({ onContact }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -50,13 +54,8 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button
-            href="https://app.thedobra.cc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="h-10 px-5 text-[13px]"
-          >
-            Analisar meus dados
+          <Button onClick={onContact} className="h-10 px-5 text-[13px]">
+            Falar com um especialista
           </Button>
         </div>
 
@@ -103,13 +102,13 @@ export function Navbar() {
                 </a>
               ))}
               <Button
-                href="https://app.thedobra.cc"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="mt-4"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  onContact();
+                }}
               >
-                Analisar meus dados
+                Falar com um especialista
               </Button>
             </div>
           </motion.nav>
