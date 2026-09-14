@@ -73,7 +73,8 @@ export function Hero({ onContact }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.36 }}
         >
-          A TheDobra conecta seus dados e mostra onde agir primeiro.
+          A TheDobra é inteligência de dados. Ela lê o que sua empresa já tem
+          e mostra onde o negócio precisa agir.
         </motion.p>
         <motion.div
           className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row"

@@ -16,6 +16,7 @@ import { Pricing } from "@/components/Pricing";
 import { ProductArchitecture } from "@/components/ProductArchitecture";
 import { Solution } from "@/components/Solution";
 import { UseCases } from "@/components/UseCases";
+import { WhatItIs } from "@/components/WhatItIs";
 import { useCallback, useState } from "react";
 
 export function Landing() {
@@ -28,6 +29,7 @@ export function Landing() {
       <Navbar onContact={openContact} />
       <main id="conteudo">
         <Hero onContact={openContact} />
+        <WhatItIs />
         <Problem />
         <ProductArchitecture />
         <Solution />

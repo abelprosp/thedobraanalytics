@@ -19,13 +19,12 @@ const problems = [
 
 export function Problem() {
   return (
-    <section id="problema" className="bg-paper text-ink">
-      <div className="mx-auto max-w-[1080px] px-5 py-28 md:px-8 md:py-40">
+    <section id="problema" className="border-t border-black/8 bg-paper text-ink">
+      <div className="mx-auto max-w-[1080px] px-5 py-24 md:px-8 md:py-32">
         <Reveal>
-          <p className="eyebrow">O problema</p>
+          <p className="eyebrow">Por que o negócio não muda sozinho</p>
           <h2 className="display mt-6 max-w-[16ch] text-[clamp(2.4rem,6.4vw,5.4rem)]">
-            Você tem dados suficientes. Mas consegue enxergar o que eles estão
-            dizendo?
+            Os dados já estão na empresa. O que falta é alguém interpretá-los.
           </h2>
         </Reveal>
 

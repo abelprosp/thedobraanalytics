@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s · TheDobra",
   },
   description:
-    "A TheDobra utiliza Business Intelligence e Inteligência Artificial para transformar dados complexos em insights claros, precisos e valiosos para o seu negócio.",
+    "A TheDobra é inteligência de dados. Conecta o que sua empresa já tem e usa BI e IA para mostrar onde o negócio precisa agir.",
   keywords: [
     "TheDobra",
     "Business Intelligence",

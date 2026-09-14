@@ -5,6 +5,14 @@ import { useState } from "react";
 
 const questions = [
   {
+    q: "O que é a TheDobra?",
+    a: "É uma plataforma de inteligência de dados. Ela conecta as fontes que a empresa já usa, organiza essas informações e usa BI e IA para mostrar o que está acontecendo no negócio e onde agir primeiro. Não entrega só um dashboard: entrega a leitura que a decisão precisa.",
+  },
+  {
+    q: "Como isso muda o meu negócio?",
+    a: "A reunião deixa de ser uma conciliação de planilhas. Diretoria, comercial e financeiro passam a ver o mesmo fato: onde a venda trava, o que pressiona a margem e qual é a próxima ação — antes do problema virar fechamento.",
+  },
+  {
     q: "Quanto tempo leva para começar?",
     a: "O início depende das fontes e do nível de organização dos dados. Na conversa inicial, mapeamos o cenário e definimos o primeiro recorte de valor.",
   },
